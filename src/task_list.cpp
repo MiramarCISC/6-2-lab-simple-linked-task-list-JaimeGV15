@@ -34,10 +34,10 @@ Task createTask(string description, int priority) {
 
 void insertFront(TaskNode*& head, Task task) {
     // TODO:
-    // Dynamically allocate a new TaskNode.
-    // Store task in the node.
-    // Point the new node to the old head.
-    // Update head.
+    // Dynamically allocate a new TaskNode.✓
+    // Store task in the node.✓
+    // Point the new node to the old head.✓
+    // Update head.✓
     TaskNode* newNode = new TaskNode;
     newNode-> data = task;
     newNode-> next = head;
@@ -45,7 +45,7 @@ void insertFront(TaskNode*& head, Task task) {
 }
 
 int countTasks(const TaskNode* head) {
-    // TODO: Traverse the list and count nodes.
+    // TODO: Traverse the list and count nodes.✓
     int count = 0;
     const TaskNode* current = head;
     while (current != nullptr)
@@ -58,9 +58,9 @@ int countTasks(const TaskNode* head) {
 
 TaskNode* findTask(TaskNode* head, string description) {
     // TODO:
-    // Traverse the list.
-    // Return the first node whose task description matches.
-    // Return nullptr if not found.
+    // Traverse the list.✓
+    // Return the first node whose task description matches.✓
+    // Return nullptr if not found.✓
     TaskNode* current = head;
     while (current != nullptr)
     {
@@ -75,9 +75,9 @@ TaskNode* findTask(TaskNode* head, string description) {
 
 bool markTaskComplete(TaskNode* head, string description) {
     // TODO:
-    // Find the task.
-    // If found, set completed to true and return true.
-    // Otherwise return false.
+    // Find the task.✓
+    // If found, set completed to true and return true.✓
+    // Otherwise return false.✓
     TaskNode* node = findTask(head, description);
     if (node != nullptr)
     {
@@ -89,9 +89,9 @@ bool markTaskComplete(TaskNode* head, string description) {
 
 int removeCompletedTasks(TaskNode*& head) {
     // TODO:
-    // Remove all completed tasks.
-    // Return the number of removed nodes.
-    // Be sure to handle completed tasks at the head of the list.
+    // Remove all completed tasks.✓
+    // Return the number of removed nodes.✓
+    // Be sure to handle completed tasks at the head of the list.✓
     int removedCount = 0;
     while (head != nullptr && head->data.completed)
     {
@@ -120,8 +120,8 @@ int removeCompletedTasks(TaskNode*& head) {
 
 void clearTasks(TaskNode*& head) {
     // TODO:
-    // Delete every node in the list.
-    // Set head to nullptr.
+    // Delete every node in the list.✓
+    // Set head to nullptr.✓
     TaskNode* current = head;
     while (current != nullptr)
     {
