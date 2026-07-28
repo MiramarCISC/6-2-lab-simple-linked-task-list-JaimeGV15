@@ -3,7 +3,7 @@
 
 using namespace std;
 
-bool isValidPriority(int priority) {
+bool isValidPriority(int priority) { // Remove all todos, I like the checkmarks.
     // TODO: Return true when priority is from 1 to 5. ✓
     if (priority >=1 && priority <=5)
     {
@@ -101,7 +101,7 @@ int removeCompletedTasks(TaskNode*& head) {
         removedCount++;
     }
     TaskNode* current = head;
-    while (current != nullptr&& current->next != nullptr)
+    while (current != nullptr&& current->next != nullptr) // Add a space to make cleaner.
     {
         if (current->next->data.completed)
         {
